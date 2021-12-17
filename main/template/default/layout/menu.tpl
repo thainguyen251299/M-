@@ -129,77 +129,7 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-            {% if _u.logged == 1 and not user_in_anon_survey %}
-                <ul class="nav navbar-nav navbar-right">
-                    {% if language_form %}
-                        <li class="dropdown language">
-                            {{ language_form }}
-                        </li>
-                    {% endif %}
-                    {% if notification_event == 0 %}
-                        {% if _u.status != 6 %}
-                            <li id="count_message_li" class="pull-left " style="float: left !important;" aria-expanded="true">
-                                <a href="{{ message_url }}">
-                                    <span id="count_message" class="badge badge-warning"></span>
-                                </a>
-                            </li>
-                            <li class="dropdown avatar-user" style="float:right">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                   aria-expanded="false">
-                                    <img class="img-circle" src="{{ _u.avatar_small }}" alt="{{ _u.complete_name }}"/>
-                                    <span class="username-movil">{{ _u.complete_name }}</span>
-                                    <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li class="user-header">
-                                        <div class="text-center">
-                                            <a href="{{ profile_url }}">
-                                                <img class="img-circle" src="{{ _u.avatar_medium }}" alt="{{ _u.complete_name }}"/>
-                                                <p class="name">{{ _u.complete_name }}</p>
-                                            </a>
-                                            <p><em class="fa fa-envelope-o" aria-hidden="true"></em> {{ _u.email }}</p>
-                                        </div>
-                                    </li>
-                                    <li role="separator" class="divider"></li>
-                                    {% if message_url %}
-                                        <li class="user-body">
-                                            <a title="{{ "Inbox"|get_lang }}" href="{{ message_url }}">
-                                                <em class="fa fa-envelope" aria-hidden="true"></em> {{ "Inbox"|get_lang }}
-                                            </a>
-                                        </li>
-                                    {% endif %}
-
-                                    {% if pending_survey_url %}
-                                        <li class="user-body">
-                                            <a href="{{ pending_survey_url }}">
-                                                <em class="fa fa-pie-chart"></em> {{ 'PendingSurveys'|get_lang }}
-                                            </a>
-                                        </li>
-                                    {% endif %}
-
-                                    {% if certificate_url %}
-                                        <li class="user-body">
-                                            <a title="{{ "MyCertificates"|get_lang }}" href="{{ certificate_url }}">
-                                                <em class="fa fa-graduation-cap"
-                                                    aria-hidden="true"></em> {{ "MyCertificates"|get_lang }}
-                                            </a>
-                                        </li>
-                                    {% endif %}
-
-                                    <li class="user-body">
-                                        <a id="logout_button" title="{{ "Logout"|get_lang }}" href="{{ logout_link }}">
-                                            <em class="fa fa-sign-out"></em> {{ "Logout"|get_lang }}
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        {% endif %}
-                    {% endif %}
-
-                    {% if notification_event == 1 %}
-                        {% include 'default/layout/notification.tpl' %}
-                    {% endif %}
-                </ul>
+            /
             {% endif %}
         </div><!--/.nav-collapse -->
     </div>
