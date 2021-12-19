@@ -633,5 +633,8 @@ $ExerciseContent = "<p>The exercise tool allows you to create exercises that wil
 $ClarContent3 = "</p><p><b>Educational Theory</b><p>For the professors, prepare a course on the internet is a question of Educational Theory too.";
 $ClarContent4 = "is at your disposal to help you during the different steps of your teaching project evolution: from tool design to its integration in a clear and coherent strategy and objective evaluation of its impact on student learning.</p>";
 $CampusHomepage = "Trang Chủ";
-$AllowPersonalAgendaTitle = "Lịch học cá nhân";
+$PortalHomepageDefaultIntroduction = "<h1>Xin chào quản trị viên</h1>";
+$HottestCourses = "Các khóa học phổ biến nhất";
+$Dashboard = "Bảng điều khiển";
+$MyAgenda = "Lịch học cá nhân";
 ?>
