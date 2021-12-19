@@ -87,7 +87,7 @@ a:focus {
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #2c5b8e;
+  border-color: red;
 }
 
 .navbar-default .navbar-toggle {
@@ -98,7 +98,7 @@ a:focus {
 }
 .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle:hover {
-  background-color: #2c5b8e;
+  background-color: red;
 }
 .badge-warning {
   background-color: #fd6600;
