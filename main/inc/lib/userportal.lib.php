@@ -879,37 +879,37 @@ class IndexManager
             $total_invitations = $number_of_new_messages_of_friend + $group_pending_invitations;
             $cant_msg = Display::badge($number_of_new_messages);
 
-            $items[] = [
-                'class' => 'inbox-message-social',
-                'icon' => Display::return_icon('inbox.png', get_lang('Inbox')),
-                'link' => api_get_path(WEB_CODE_PATH).'messages/inbox.php',
-                'title' => get_lang('Inbox').$cant_msg,
-            ];
+            // $items[] = [
+            //     'class' => 'inbox-message-social',
+            //     'icon' => Display::return_icon('inbox.png', get_lang('Inbox')),
+            //     'link' => api_get_path(WEB_CODE_PATH).'messages/inbox.php',
+            //     'title' => get_lang('Inbox').$cant_msg,
+            // ];
 
-            $items[] = [
-                'class' => 'new-message-social',
-                'icon' => Display::return_icon('new-message.png', get_lang('Compose')),
-                'link' => api_get_path(WEB_CODE_PATH).'messages/new_message.php',
-                'title' => get_lang('Compose'),
-            ];
+            // $items[] = [
+            //     'class' => 'new-message-social',
+            //     'icon' => Display::return_icon('new-message.png', get_lang('Compose')),
+            //     'link' => api_get_path(WEB_CODE_PATH).'messages/new_message.php',
+            //     'title' => get_lang('Compose'),
+            // ];
 
-            if (api_get_setting('allow_social_tool') === 'true') {
-                $total_invitations = Display::badge($total_invitations);
-                $items[] = [
-                    'class' => 'invitations-social',
-                    'icon' => Display::return_icon('invitations.png', get_lang('PendingInvitations')),
-                    'link' => api_get_path(WEB_CODE_PATH).'social/invitations.php',
-                    'title' => get_lang('PendingInvitations').$total_invitations,
-                ];
-            }
+            // if (api_get_setting('allow_social_tool') === 'true') {
+            //     $total_invitations = Display::badge($total_invitations);
+            //     $items[] = [
+            //         'class' => 'invitations-social',
+            //         'icon' => Display::return_icon('invitations.png', get_lang('PendingInvitations')),
+            //         'link' => api_get_path(WEB_CODE_PATH).'social/invitations.php',
+            //         'title' => get_lang('PendingInvitations').$total_invitations,
+            //     ];
+            // }
         }
 
-        $items[] = [
-            'class' => 'personal-data',
-            'icon' => Display::return_icon('database.png', get_lang('PersonalDataReport')),
-            'link' => api_get_path(WEB_CODE_PATH).'social/personal_data.php',
-            'title' => get_lang('PersonalDataReport'),
-        ];
+        // $items[] = [
+        //     'class' => 'personal-data',
+        //     'icon' => Display::return_icon('database.png', get_lang('PersonalDataReport')),
+        //     'link' => api_get_path(WEB_CODE_PATH).'social/personal_data.php',
+        //     'title' => get_lang('PersonalDataReport'),
+        // ];
 
         if (api_get_configuration_value('allow_my_files_link_in_homepage')) {
             if (api_get_setting('allow_my_files') !== 'false') {
@@ -1070,36 +1070,36 @@ class IndexManager
         }
 
         // Sort courses
-        $items[] = [
-            'class' => 'order-course',
-            'icon' => Display::return_icon('order-course.png', get_lang('SortMyCourses')),
-            'link' => api_get_path(WEB_CODE_PATH).'auth/sort_my_courses.php',
-            'title' => get_lang('SortMyCourses'),
-        ];
+        // $items[] = [
+        //     'class' => 'order-course',
+        //     'icon' => Display::return_icon('order-course.png', get_lang('SortMyCourses')),
+        //     'link' => api_get_path(WEB_CODE_PATH).'auth/sort_my_courses.php',
+        //     'title' => get_lang('SortMyCourses'),
+        // ];
 
         // Session history
-        if (isset($_GET['history']) && intval($_GET['history']) == 1) {
-            $items[] = [
-                'class' => 'history-course',
-                'icon' => Display::return_icon('history-course.png', get_lang('DisplayTrainingList')),
-                'link' => api_get_path(WEB_PATH).'user_portal.php',
-                'title' => get_lang('DisplayTrainingList'),
-            ];
-        } else {
-            $items[] = [
-                'class' => 'history-course',
-                'icon' => Display::return_icon('history-course.png', get_lang('HistoryTrainingSessions')),
-                'link' => api_get_path(WEB_PATH).'user_portal.php?history=1',
-                'title' => get_lang('HistoryTrainingSessions'),
-            ];
-        }
+        // if (isset($_GET['history']) && intval($_GET['history']) == 1) {
+        //     $items[] = [
+        //         'class' => 'history-course',
+        //         'icon' => Display::return_icon('history-course.png', get_lang('DisplayTrainingList')),
+        //         'link' => api_get_path(WEB_PATH).'user_portal.php',
+        //         'title' => get_lang('DisplayTrainingList'),
+        //     ];
+        // } else {
+        //     $items[] = [
+        //         'class' => 'history-course',
+        //         'icon' => Display::return_icon('history-course.png', get_lang('HistoryTrainingSessions')),
+        //         'link' => api_get_path(WEB_PATH).'user_portal.php?history=1',
+        //         'title' => get_lang('HistoryTrainingSessions'),
+        //     ];
+        // }
 
-        if ($isHrm) {
-            $items[] = [
-                'link' => api_get_path(WEB_CODE_PATH).'auth/hrm_courses.php',
-                'title' => get_lang('HrmAssignedUsersCourseList'),
-            ];
-        }
+        // if ($isHrm) {
+        //     $items[] = [
+        //         'link' => api_get_path(WEB_CODE_PATH).'auth/hrm_courses.php',
+        //         'title' => get_lang('HrmAssignedUsersCourseList'),
+        //     ];
+        // }
 
         // Course catalog
         if ($show_course_link) {
@@ -1118,18 +1118,18 @@ class IndexManager
             }
         }
 
-        if (!api_is_anonymous()) {
-            $items[] = [
-                'icon' => Display::return_icon('clock.png', get_lang('LastVisitedCourse')),
-                'link' => api_get_path(WEB_CODE_PATH).'course_home/last_course.php',
-                'title' => get_lang('LastVisitedCourse'),
-            ];
-            $items[] = [
-                'icon' => Display::return_icon('learnpath.png', get_lang('LastVisitedLp')),
-                'link' => api_get_path(WEB_CODE_PATH).'course_home/last_lp.php',
-                'title' => get_lang('LastVisitedLp'),
-            ];
-        }
+        // if (!api_is_anonymous()) {
+        //     $items[] = [
+        //         'icon' => Display::return_icon('clock.png', get_lang('LastVisitedCourse')),
+        //         'link' => api_get_path(WEB_CODE_PATH).'course_home/last_course.php',
+        //         'title' => get_lang('LastVisitedCourse'),
+        //     ];
+        //     $items[] = [
+        //         'icon' => Display::return_icon('learnpath.png', get_lang('LastVisitedLp')),
+        //         'link' => api_get_path(WEB_CODE_PATH).'course_home/last_lp.php',
+        //         'title' => get_lang('LastVisitedLp'),
+        //     ];
+        // }
 
         if (api_is_teacher()) {
             if (api_get_configuration_value('my_courses_show_pending_work')) {
